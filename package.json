@@ -1,0 +1,12 @@
+{
+  "name": "chrome-adblocker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private Manifest V3 ad and tracker blocker for Chrome",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-rules.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "zip": "zip -r dist.zip manifest.json src rules icons -x '*.DS_Store'"
+  }
+}

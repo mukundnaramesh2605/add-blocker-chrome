@@ -1,0 +1,77 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1d2127;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #c0392b;
+  --track: #d1d5db;
+  --card: #f7f7f8;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1d21;
+    --fg: #ececf0;
+    --muted: #9ca3af;
+    --border: #2f3138;
+    --accent: #e0584a;
+    --track: #4b5058;
+    --card: #25272c;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+h1 { font-size: 15px; margin: 0; }
+h2 { font-size: 15px; margin: 0 0 4px; }
+.muted { color: var(--muted); }
+small { display: block; font-size: 12px; }
+header { display: flex; align-items: center; gap: 8px; }
+
+/* Popup */
+.popup { width: 300px; padding: 14px; }
+.popup header { margin-bottom: 12px; }
+.count { text-align: center; padding: 14px 0; background: var(--card); border-radius: 10px; margin-bottom: 8px; }
+.big { font-size: 34px; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.off .big { color: var(--muted); }
+.row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 2px; border-bottom: 1px solid var(--border); cursor: pointer;
+}
+.row strong { display: block; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row.disabled { opacity: 0.5; cursor: default; }
+footer { display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; }
+a { color: var(--accent); }
+
+/* Toggle switch */
+.switch {
+  appearance: none; flex: none; width: 38px; height: 22px; border-radius: 11px;
+  background: var(--track); position: relative; cursor: pointer; transition: background 0.15s; margin: 0;
+}
+.switch::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px;
+  border-radius: 50%; background: #fff; transition: transform 0.15s;
+}
+.switch:checked { background: var(--accent); }
+.switch:checked::after { transform: translateX(16px); }
+.switch:disabled { cursor: default; }
+
+/* Options */
+.options { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
+.options header { margin-bottom: 20px; }
+.options section { margin-bottom: 22px; }
+textarea {
+  width: 100%; padding: 8px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--card); color: var(--fg); font: 13px ui-monospace, monospace; resize: vertical;
+}
+.actions { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+button {
+  background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+  padding: 8px 18px; font: inherit; font-weight: 600; cursor: pointer;
+}
+code { background: var(--card); padding: 1px 5px; border-radius: 4px; }

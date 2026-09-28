@@ -1,0 +1,12 @@
+{
+  "builtAt": "2026-09-28T14:20:24.395Z",
+  "easylist": {
+    "rules": 3768,
+    "firstBlockId": 524
+  },
+  "easyprivacy": {
+    "rules": 9087,
+    "firstBlockId": 834
+  },
+  "cosmeticGeneric": 13636
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Private Ad Blocker – Settings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="options">
+  <header>
+    <img src="../icons/icon48.png" alt="" width="32" height="32" />
+    <h1>Private Ad Blocker</h1>
+  </header>
+
+  <section>
+    <h2>Allowed sites</h2>
+    <p class="muted">Ads are not blocked on these sites, including their subdomains. Enter one domain per line.</p>
+    <textarea id="allowlist" rows="8" spellcheck="false" placeholder="example.com"></textarea>
+  </section>
+
+  <section>
+    <h2>Extra blocked domains</h2>
+    <p class="muted">All requests to these domains are blocked on every site. Enter one domain per line.</p>
+    <textarea id="blocked" rows="8" spellcheck="false" placeholder="annoying-widget.com"></textarea>
+  </section>
+
+  <div class="actions">
+    <button id="save">Save</button>
+    <span id="saved" class="muted"></span>
+  </div>
+
+  <section>
+    <h2>Filter lists</h2>
+    <p class="muted" id="stats">Loading…</p>
+    <p class="muted">To update the lists, run <code>npm run build</code> in the project folder, then reload the extension on <code>chrome://extensions</code>.</p>
+  </section>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

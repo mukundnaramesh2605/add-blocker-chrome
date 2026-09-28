@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="popup">
+  <header>
+    <img src="../icons/icon32.png" alt="" width="24" height="24" />
+    <h1>Private Ad Blocker</h1>
+  </header>
+
+  <section class="count">
+    <div id="count" class="big">–</div>
+    <div class="muted">requests blocked on this page</div>
+  </section>
+
+  <label class="row">
+    <span>
+      <strong>Protection</strong>
+      <small class="muted" id="global-status">On everywhere</small>
+    </span>
+    <input type="checkbox" id="global" class="switch" />
+  </label>
+
+  <label class="row" id="site-row">
+    <span>
+      <strong id="site-name">This site</strong>
+      <small class="muted" id="site-status">Blocking ads</small>
+    </span>
+    <input type="checkbox" id="site" class="switch" />
+  </label>
+
+  <footer>
+    <a href="#" id="options">Settings</a>
+    <span class="muted" id="rule-info"></span>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
